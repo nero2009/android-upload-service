@@ -60,6 +60,7 @@ fun Context.startNewUpload(
              */
             startForegroundService(intent)
         } else {
+            Log.e("UploadService start service", "Error while starting AndroidUploadService" + exc.message)
             UploadServiceLogger.error(
                 component = "UploadService",
                 uploadId = params.id,
